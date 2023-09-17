@@ -1,0 +1,114 @@
+:root {
+  --main-trans: 0.5s;
+  --main-buttons-color: #fd576c;
+  --main-buttons-outline: #fd576da9;
+}
+
+.ourwork .buttons {
+  margin-bottom: 100px !important;
+}
+
+.ourwork .buttons p {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.ourwork .buttons p::after {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0%;
+  top: 80%;
+  left: 0;
+  transition: 0.3s;
+  background-color: var(--main-buttons-color);
+}
+
+.ourwork .buttons p:hover:after {
+  height: 7px;
+  width: 100%;
+}
+
+.ourwork .work-box {
+  cursor: pointer;
+}
+
+.ourwork .work-box.hidden {
+  display: none;
+}
+
+.ourwork .work-box img {
+  width: 100%;
+  max-height: 310px;
+  border-radius: 10px;
+}
+
+.ourwork .work-box .text h2 {
+  position: relative;
+  width: fit-content;
+  font-size: 16px;
+}
+
+.ourwork .work-box .text h2::after {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+  background-color: var(--main-buttons-color);
+}
+
+.ourwork .work-box:hover h2:after {
+  height: 7px;
+  width: 100%;
+}
+
+.ourwork button {
+  font-size: 14px;
+  padding: 15px 0px !important;
+  border-radius: 25px;
+  background-color: var(--main-buttons-color);
+  outline: 6px solid #fd576d70;
+  transition: var(--main-trans);
+}
+
+.ourwork button:hover {
+  outline-color: var(--main-buttons-outline);
+}
+
+.web-image {
+  display: none;
+  position: fixed;
+  height: 100%;
+  min-width: 100%;
+  z-index: 10000000;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  overflow-y: auto;
+}
+
+.web-image.show {
+  display: block;
+}
+
+.web-image img {
+  max-width: 100%;
+}
+
+.close-btn {
+  display: none;
+  font-size: 30px;
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 999999999;
+}
+
+.close-btn.show {
+  display: block;
+}
