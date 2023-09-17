@@ -162,8 +162,7 @@ nav .links button:hover {
   opacity: 1;
   visibility: visible;
   width: 101vw;
-  min-height: 100vh;
-  height: fit-content;
+  height: 92vh !important;
   overflow-y: auto;
   border-radius: 0;
   background-color: rgba(0, 0, 0, 0.911);
